@@ -1,0 +1,131 @@
+/**
+ * 按钮的样式
+ * @param {string} @width  按钮宽度
+ * @param {string} @height 按钮高度
+ */
+.x-btn(@width: auto, @height: auto) {
+    display: inline-block;
+    width: @width;
+    height: @height;
+    padding: 0;
+    border: none;
+    text-align: center;
+    zoom: 1;
+    *display: inline;
+}
+
+/**
+ * 图标样式
+ * @param {string} width icon宽度
+ * @param {string} height icon高度
+ * @param {string} margin-right 右外边距
+ */
+.x-icon (@width: 16px, @height:16px, @margin-right: 2px){
+    display: inline-block;
+    margin-right: @margin-right;
+    width: @width;
+    height: @height;
+    line-height: @height;
+    vertical-align: text-bottom;
+    *display: inline;
+    zoom: 1;
+}
+
+/**
+ * 图标箭头样式
+ * @param {string} height 箭头方向 t r b l 分别对应 上 右 下 左
+ * @param {string} width 宽度
+ * @param {string} color 颜色
+ */
+.x-icon-arrow (@direction, @width, @color) {
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: dashed;
+    overflow: hidden;
+    border-width: @width;
+}
+.x-icon-arrow (@direction, @width, @color) when (@direction = t) {
+    border-top-width: 0;
+    border-bottom-style: solid;
+    border-bottom-color: @color;
+}
+.x-icon-arrow (@direction, @width, @color) when (@direction = r) {
+    border-right-width: 0;
+    border-left-style: solid;
+    border-left-color: @color;
+}
+.x-icon-arrow (@direction, @width, @color) when (@direction = b) {
+    border-bottom-width: 0;
+    border-top-style: solid;
+    border-top-color: @color;
+}
+.x-icon-arrow (@direction, @width, @color) when (@direction = l) {
+    border-left-width: 0;
+    border-right-style: solid;
+    border-right-color: @color;
+}
+/**
+ * 颜色渐变
+ * @param {string} fromColor 颜色 
+ * @param {string} toColor 颜色
+ */
+.x-linear (@fromColor, @toColor) {
+    background: -webkit-gradient(linear,left top,left bottom,from(@fromColor),to(@toColor));
+    background: -moz-linear-gradient(top,@fromColor,@toColor);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@fromColor, endColorstr=@toColor);
+    background: -o-linear-gradient(top,@fromColor,@toColor);
+    background: -ms-linear-gradient(top,@fromColor 0,@toColor 100%);
+    background: linear-gradient(top,@fromColor,@toColor);
+} 
+/**
+ * input
+ * @param {string} width
+ * @param {string} height
+ */
+.x-input (@width: 100px, @height:16px) {
+    width: @width;
+    height: @height;
+    padding: 3px 10px;
+    border: 1px solid @x-gray;
+    font-size: 12px;
+    line-height: @height;
+    &.invalid,
+    &:focus.invalid {
+        border: 1px solid @x-red;
+    }   
+}
+
+/*包含3态的按钮*/
+.x-common-btn(@width:auto, @height:auto, @borderradius: 2px, @backcolor:#ff2d4b, @hovercolor:#e52843, @disablecolor:#888, @versacolor:#5c5c5c) {
+    .x-btn(@width, @height);
+    .x-transition(background-color, .2s);
+    .x-border-radius(@borderradius);
+    font-size: 1em;
+    color: @x-white;
+    background-color: @backcolor;
+    cursor:pointer;
+    behavior: url(/static/css/ie-css3.htc);
+    /*取消类按钮*/
+    &.versa {
+        background-color: @x-black-light;
+    }
+    &.versa:hover {
+        background-color: @versacolor;
+    }
+    /*hover样式*/
+    &:hover {
+        background-color: @hovercolor;
+    }
+    /*不可点击态*/
+    &.disable,&.disabled{
+        background-color: @disablecolor;
+        cursor:default;
+    }
+}
+
+
+
+
+
+

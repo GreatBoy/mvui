@@ -1,0 +1,321 @@
+/**
+ * 公用函数
+ * @author gaochao
+ */
+/* clearfix less实现 */
+.x-clearfix() {
+    *zoom: 1;
+    *overflow: hidden;
+    &:after,
+    &:before {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* 去掉双击选中 */
+.x-user-select(@select: none) {
+    -moz-user-select: @select;
+    -ms-user-select: @select;
+    -webkit-user-select: @select;
+    -o-user-select: @select;
+    -ms-user-select: @select;
+    user-select: @select;
+}
+
+/**
+ * css3动画
+ * @param {string} @property 需要动画的属性，默认all
+ * @param {string} @duration 持续时间，默认1s
+ * @param {string} @timing-function 动画函数，默认ease-in
+ */
+.x-transition(@property: all, @duration: .3s, @timingFunction: ease-in, @transitionDelay:0s) {
+    -webkit-transition: @property @duration @timingFunction @transitionDelay;
+    -moz-transition: @property @duration @timingFunction @transitionDelay;
+    -o-transition: @property @duration @timingFunction @transitionDelay;
+    transition: @property @duration @timingFunction @transitionDelay;
+    -ms-transition: @property @duration @timingFunction @transitionDelay;
+}
+
+/**
+ * css3动画 旋转
+ * @param {string} @deg 旋转角度，默认0deg
+ */
+.x-transform-rotate(@deg: 0deg) {
+    -webkit-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+    -o-transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+    transform: rotate(@deg);
+}
+
+/**
+ * css3动画 旋转
+ * @param {string} @deg 旋转角度，默认0deg
+ */
+.x-transform-rotateX(@deg: 0deg) {
+    -webkit-transform: rotateX(@deg);
+    -moz-transform: rotateX(@deg);
+    -o-transform: rotateX(@deg);
+    -ms-transform: rotateX(@deg);
+    transform: rotateX(@deg);
+}
+
+/**
+ * css3动画 缩放
+ * @param {Number} @x 缩放比例
+ * @param {Number} @y 缩放比例
+ */
+.x-transform-scale(@x: 1, @y: 1) {
+    -ms-transform: scale(@x,@y);
+    /* IE 9 */
+    -webkit-transform: scale(@x,@y);
+    /* Chrome, Safari, Opera */
+    transform: scale(@x,@y);
+}
+
+/**
+ * css3动画 translate
+ * @param {Number} @x translateX
+ * @param {Number} @y translateY
+ */
+.x-transform-translate(@x: 0px, @y: 0px) {
+    -ms-transform: translate(@x,@y);
+    /* IE 9 */
+    -webkit-transform: translate(@x,@y);
+    -o-transform: translate(@x,@y);
+    -moz-transform: translate(@x,@y);
+    transform: translate(@x,@y);
+}
+
+/**
+ * css3动画 translate
+ * @param {Number} @x translateX
+ * @param {Number} @y translateY
+ */
+.x-transform-translate3d(@x: 0px, @y: 0px, @z: 0px) {
+    -ms-transform: translate3d(@x,@y,@z);
+    /* IE 9 */
+    -webkit-transform: translate3d(@x,@y,@z);
+    -o-transform: translate3d(@x,@y,@z);
+    -moz-transform: translate3d(@x,@y,@z);
+    transform: translate3d(@x,@y,@z);
+}
+
+/**
+ * css3动画 animate
+ * @param {String} @aniName 动画名
+ * @param {String} @time 时间
+ * @param {String} @type 动画类型
+ * @param {String} @delay 延迟
+ * @param {String} @loop 是否循环
+ * @param {String} @alternate 播放模式
+ */
+.x-animate(@aniName: '', @time: 0ms, @type: ease, @delay: 0s, @loop: infinite, @alternate: normal) {
+    -webkit-animation: @aniName @time @type @delay @loop @alternate;
+    -ms-animation: @aniName @time @type @delay @loop @alternate;
+    -o-animation: @aniName @time @type @delay @loop @alternate;
+    -moz-animation: @aniName @time @type @delay @loop @alternate;
+    animation: @aniName @time @type @delay @loop @alternate;
+}
+
+/**
+ * 透明度
+ * @param {int} @opacity 透明度
+ */
+.x-opacity(@opacity: .5) {
+    opacity: @opacity;
+    @filler: (@opacity * 100);
+    filter:alpha(opacity=@filler);
+}
+
+/**
+ * 边框背景设置
+ * @param {String} bd-color 边框颜色
+ * @param {String} bg-color 背景颜色
+ */
+.x-color-bd-bg (@bd-color, @bg-color) {
+    background-color: @bg-color;
+    border: 1px solid @bd-color;
+}
+
+/**
+ * 背景尺寸
+ * @param {String} background-size 背景尺寸
+ */
+.x-background-size (@background-size) {
+    background-size: @background-size;
+    -webkit-background-size: @background-size;
+    -moz-background-size: @background-size;
+    -o-background-size: @background-size;
+    -ms-background-size: @background-size;
+}
+
+/**
+ * 字体相关设置
+ * @param {String} font-size 大小
+ * @param {String} font-weight 粗细
+ * @param {String} color 字体颜色
+ */
+.x-font (@font-size: 12px, @color: #101010, @font-weight: normal) {
+    font-size: @font-size;
+    color: @color;
+    font-weight: @font-weight;
+    text-decoration: none;
+}
+
+/**
+ * 圆角设置
+ * @param {String} size 大小
+ */
+.x-border-radius(@size) {
+    -moz-border-radius: @size;
+    -ms-border-radius: @size;
+    -o-border-radius: @size;
+    -webkit-border-radius: @size;
+    border-radius: @size;
+}
+
+/**
+* 背景透明
+* @param {Number} red 红色值0-255
+* @param {Number} green 红色值0-255
+* @param {Number} blue 红色值0-255
+* @param {Number} alpha 红色值0-1
+*/
+.x-background-trans(@red, @green, @blue, @alpha) {
+    background: rgb(@red, @green, @blue);
+    background: rgba(@red, @green, @blue, @alpha);
+    filter:~`"alpha(opacity=" + "@{alpha}" * 100 + ")"`;
+}
+
+/**
+ * 阴影效果
+ * @param {String} x 水平位移
+ * @param {String} y 垂直位置
+ * @param {String} r 模糊半径
+ * @param {String} c 颜色
+ * @param {String} l 阴影尺寸
+ */
+.x-box-shadow (@x, @y, @r, @c, @l:0px) {
+    -moz-box-shadow:  @x @y @r @l @c;
+    -webkit-box-shadow: @x @y @r @l @c;
+    -o-box-shadow: @x @y @r @l @c;
+    -ms-box-shadow: @x @y @r @l @c;
+    box-shadow: @x @y @r @l @c;
+}
+
+/**
+ * box-sizing
+ * @param {String} property  属性设置
+ */
+.x-box-sizing (@property) {
+    box-sizing: @property;
+    -moz-box-sizing: @property;
+    -webkit-box-sizing: @property;
+    -ms-box-sizing: @property;
+}
+
+/**
+ * landing页面输入框等元素高度
+ * @param {string} height 高度
+ * @param {string} line-height 行高
+ */
+.x-item-height(@height: 60px, @lineHeight: 60px) {
+    height: @height;
+    line-height: @lineHeight;
+}
+
+/**
+ * a无text-decoration
+ */
+.x-a-none {
+    text-decoration: none;
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+/**
+ * 前缀宏代换
+ * @param {String} property 属性
+ * @param {String} rest 值
+ **/
+.x-prefix(@property;@rest...) {
+    -webkit-@{property}: @rest;
+    -moz-@{property}: @rest;
+    -o-@{property}: @rest;
+    -ms-@{property}: @rest;
+    @{property}: @rest;
+}
+
+/**
+ * 前缀宏代换
+ * @param {String} name 帧名称
+ * @param {String} frames 帧动画
+ **/
+.x-keyframes (@name, @frames) {
+    @-webkit-keyframes @name { @frames(); }
+    @-moz-keyframes @name { @frames(); }
+    @-ms-keyframes @name { @frames();}
+    @-o-keyframes @name { @frames(); }
+    @keyframes @name { @frames(); }
+}
+
+/**
+ * flex
+ */
+.x-display-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/**
+ * flex num数量
+ * @param {Number} num 水平位移
+ */
+.x-flex (@num) {
+    -webkit-box-flex: @num;
+    -ms-flex: @num;
+    -moz-flex: @num;
+    -o-flex: @num;
+    -o-webkit-flex: @num;
+    flex: @num;
+}
+
+/**
+ * flex-item 排列方式
+ * @param {String} property 属性
+ */
+.x-flex-align-items (@property) {
+    -webkit-box-align: @property;
+    -ms-flex-align: @property;
+    align-items: @property;
+}
+
+/**
+ * 旋转动画
+ * @param {String} time 时间
+ * @param {String} type 动画类型
+ * @param {String} delay 延迟执行时间
+ * @param {String} loop 循环方式
+ */
+.x-animate-circular(@time: 1s,@type: linear, @delay: 0s, @loop: infinite) {
+    .x-animate(rotate, @time, @type, @delay, @loop);
+    .x-prefix(transform-origin; center center);
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    .x-keyframes(rotate,{
+    to {
+            -webkit-transform: rotate(1turn);
+            transform: rotate(1turn)
+        }
+    });
+}
+
