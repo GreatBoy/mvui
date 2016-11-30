@@ -7,9 +7,6 @@
     "doc": "docs",
     "example": "example"
   },
-  "dependencies": {
-    
-  },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
     "babel": "^6.3.13",
