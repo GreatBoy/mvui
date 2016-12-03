@@ -40,11 +40,6 @@ mobile + vue + ui = mvui
 - Based on npm + webpack + babel, support ES2015
 
 
-## Programming 
-
-![iView](https://raw.githubusercontent.com/iview/iview/master/assets/iview.png)
-
-
 
 ## Install
 
