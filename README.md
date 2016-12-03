@@ -1,12 +1,16 @@
 
 
-<div align=center>
-![](./assets/image/Mvui-02.png)
-</div>
+<p align="center">
+    <a href="https://greatboy.github.io/mvui-page/">
+        <img width="200" src="https://github.com/GreatBoy/mvui/blob/master/assets/image/Mvui-02.png">
+    </a>
+</p>
 
 
 
 # Mvui 
+
+## Desc
 
 mvui是一套基于 Vue.js 的开源UI组件库，主要服务于移动端产品，崇尚自由的原则，您可以自己有更改的样式以及添加组件的功能
 
@@ -20,11 +24,90 @@ mobile + vue + ui = mvui
 希望大家踊跃造轮子，因为没有自己亲手去折腾一番，永远对某些技术人认识还是不够深刻，多多动手，希望大家都能成为轮子发明人，哈哈
 
 
+## Docs
 
-[查看demo]https://greatboy.github.io/mvui-example/#!/home
-[中文文档]https://greatboy.github.io/mvui-page/
+### [中文文档](https://greatboy.github.io/mvui-page/)
 
 
+## Overview
+
+### [组件概览（Component Overview）](https://greatboy.github.io/mvui-example/)
+
+
+## Features
+
+- Using .vue file development mode
+- Based on npm + webpack + babel, support ES2015
+
+
+## Programming 
+
+![iView](https://raw.githubusercontent.com/iview/iview/master/assets/iview.png)
+
+
+
+## Install
+
+### Install vue-webpack project in the first place 
+
+Use [vue-vueRouter-webpack](https://github.com/icarusion/vue-vueRouter-webpack)(Recommended) Or [vue-cli](https://github.com/vuejs/vue-cli)
+
+### Install mvui
+
+```bash
+npm install mvui
+```
+
+### Babel support for mvui in webpack
+
+
+```js
+module: {
+    loaders: [
+        {
+            test: /node_modules\/mvui\/.*?js$/,
+            loader: 'babel'
+        },// for Mac
+        {   
+            test: /node_modules\\mvui\/.*?js$/,         
+            loader: 'babel' 
+        },// for Windows
+        { 
+            test: /\.js$/, 
+            loader: 'babel', 
+            exclude: /node_modules/ 
+        }
+    ]
+}
+```
+
+
+
+## Usage
+
+Use component as required
+
+```html
+<template>  
+    <div>
+        <Icon class="mv-icon-reduce"></Icon>
+    </div>
+</template> 
+<script>
+    import { Icon } from 'mvui';
+    export default{   
+        components: { 
+            Icon,
+        }
+    }
+</script>
+```
+
+
+## Links
+
+- [Vue](https://github.com/vuejs/vue)
+- [Webpack](https://github.com/webpack/webpack)
 
 
 
