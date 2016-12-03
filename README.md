@@ -36,19 +36,19 @@ mobile + vue + ui = mvui
 ### 安装
 
 
-#### 依赖于vue.js,先安装vue.js
+#### 1、依赖于vue.js,先安装vue.js
 
 [vue-vueRouter-webpack](https://github.com/icarusion/vue-vueRouter-webpack)
 [vue-cli](https://github.com/vuejs/vue-cli)
 
 
-#### Install mvui
+#### 2、Install mvui
 
 ```bash
 npm install mvui
 ```
 
-#### webpack配置文件引入mvui
+#### 3、webpack配置文件引入mvui
 
 ```js
 module: {
@@ -71,7 +71,7 @@ module: {
 ```
 
 
-### 引入例子
+#### 4、引入例子
 
 ```html
 <template>  
