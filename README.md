@@ -1,12 +1,16 @@
-###mvui 一套基于vue的移动端组件库，mobile + vue + ui = mvui
 
 
-[](./assets/image/Mvui-02.png)
+<div align=center>
+![](./assets/image/Mvui-02.png)
+</div>
 
 
-# 关于Mvui
-Mvui是一套基于 Vue.js 的开源UI组件库，主要服务于移动端产品，崇尚自由的原则，您可以自己有更改的样式以及添加组件的功能
-mVui = mobile + Vue.js + Ui + Component
+
+# Mvui 
+
+mvui是一套基于 Vue.js 的开源UI组件库，主要服务于移动端产品，崇尚自由的原则，您可以自己有更改的样式以及添加组件的功能
+
+mobile + vue + ui = mvui
 
 基于单文件的Vue组件化开发模式，npm + webpack + babel 开发
 
@@ -14,8 +18,6 @@ mVui = mobile + Vue.js + Ui + Component
 
 
 希望大家踊跃造轮子，因为没有自己亲手去折腾一番，永远对某些技术人认识还是不够深刻，多多动手，希望大家都能成为轮子发明人，哈哈
-
-
 
 
 
