@@ -8,7 +8,7 @@
 
 
 
-## 简介
+### 简介
 
 mvui是一套基于 Vue.js 的开源UI组件库，主要服务于移动端产品，崇尚自由的原则，您可以自己有更改的样式以及添加组件的功能
 
@@ -22,33 +22,33 @@ mobile + vue + ui = mvui
 希望大家踊跃造轮子，因为没有自己亲手去折腾一番，永远对某些技术人认识还是不够深刻，多多动手，希望大家都能成为轮子发明人，哈哈
 
 
-## 文档
+### 文档
 
-### [中文文档](https://greatboy.github.io/mvui-page/)
-
-
-## 组件demo
-
-### [组件概览（Component Overview）](https://greatboy.github.io/mvui-example/)
+#### [中文文档](https://greatboy.github.io/mvui-page/)
 
 
+### 预览
 
-## 组件安装
-
-
-### Install vue-webpack project in the first place 
-
-Use [vue-vueRouter-webpack](https://github.com/icarusion/vue-vueRouter-webpack)(Recommended) Or [vue-cli](https://github.com/vuejs/vue-cli)
+#### [组件概览（Component Overview）](https://greatboy.github.io/mvui-example/)
 
 
-### Install mvui
+
+### 安装
+
+
+#### 依赖于vue.js,先安装vue.js
+
+[vue-vueRouter-webpack](https://github.com/icarusion/vue-vueRouter-webpack)
+[vue-cli](https://github.com/vuejs/vue-cli)
+
+
+#### Install mvui
 
 ```bash
 npm install mvui
 ```
 
-### webpack配置文件引入mvui
-
+#### webpack配置文件引入mvui
 
 ```js
 module: {
@@ -71,7 +71,7 @@ module: {
 ```
 
 
-## 例子
+### 引入例子
 
 ```html
 <template>  
@@ -90,7 +90,7 @@ module: {
 ```
 
 
-## 链接
+### 链接
 
 - [Vue](https://github.com/vuejs/vue)
 - [Webpack](https://github.com/webpack/webpack)
