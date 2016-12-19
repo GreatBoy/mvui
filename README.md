@@ -12,6 +12,8 @@
 
 mvui是一套基于 Vue.js 的开源UI组件库，主要服务于移动端产品，崇尚自由的原则，您可以自己有更改的样式以及添加组件的功能
 
+此版基于 vue 1.0.26 开发，目前继续开发vue 2.0版本
+
 mobile + vue + ui = mvui
 
 基于单文件的Vue组件化开发模式，npm + webpack + babel 开发
